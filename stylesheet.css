@@ -11,7 +11,7 @@
       color: white;
     }
 
-    /* Header */
+
     .site-header {
       width: 100%;
       position: fixed; /* stays at top */
@@ -89,10 +89,12 @@
 
 .project img {
   width: 100%;
-  height: auto; /* keep aspect ratio */
+  height: 300px; /* fixed height for all images */
+  object-fit: cover; /* crops/resizes to cover container */
   display: block;
   border-radius: 8px;
 }
+
 
 
 /* Mobile: stack projects */
@@ -123,3 +125,9 @@
   text-align: center;
   width: 100%;
 }
+
+.project-text {
+  min-height: 80px; /* all text boxes same height */
+}
+
+
