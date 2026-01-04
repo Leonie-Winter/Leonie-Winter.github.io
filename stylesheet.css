@@ -1,133 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: black;
+  color: white;
+}
+.site-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #181a1b;
+  color: white;
+}
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.2rem 2rem;
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: sans-serif;
-      background-color: black;
-      color: white;
-    }
-
-
-    .site-header {
-      width: 100%;
-      position: fixed; /* stays at top */
-      top: 0;
-      left: 0;
-      z-index: 10;
-      background-color: #181a1b; /* dark background so white text is visible */
-      color: white;
-    }
-
-    .nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.2rem 2rem;
-
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: white;
-      font-size: 0.95rem;
-      position: relative;
-    }
-
-    .nav-links a::after {
-      content: "";
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: white;
-      transition: width 0.2s ease;
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Add spacing so content isn't hidden under fixed header */
-    main {
-      padding-top: 80px; /* roughly the height of header */
-    }
-
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.2s ease;
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+main {
+  padding-top: 80px;
+}
 .projects {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   margin: 2rem 10px;
   justify-content: center;
-  align-items: stretch; /* ensures all flex items are equal height */
+  align-items: stretch;
 }
-
 .project {
   flex: 1 1 calc(33.333% - 20px);
   box-sizing: border-box;
   display: flex;
-  flex-direction: column; /* stack image and text vertically */
+  flex-direction: column;
 }
-
 .project img {
   width: 100%;
-  height: 300px; /* fixed height for all images */
-  object-fit: cover; /* crops/resizes to cover container */
+  height: 300px;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
 }
-
-
-
-/* Mobile: stack projects */
 @media (max-width: 768px) {
   .project {
-    flex: 1 1 100%; /* full width on small screens */
+    flex: 1 1 100%;
   }
 }
 .site-footer {
-  background-color: #333;       /* dark footer */
-  color: white;                 /* text color */
+  background-color: #333;
+  color: white;
   text-align: center;
   padding: 1.5rem 1rem;
   margin-top: 2rem;
   font-size: 0.9rem;
 }
-
 .site-footer a {
   color: #fff;
-  text-decoration: underline;  /* makes links obvious */
+  text-decoration: underline;
 }
-
 .site-footer a:hover {
-  color: #aaa;                 /* subtle hover effect */
+  color: #aaa;
 }
-
 .TitleCard {
   text-align: center;
   width: 100%;
 }
-
 .project-text {
-  min-height: 80px; /* all text boxes same height */
+  min-height: 80px;
 }
-
-
+ul {
+  margin-left: 3vw;
+}
+.hero {
+  margin-top: 80px;
+  width: 100vw;
+  height: 75vh;
+  background-image: url("images/crow.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
